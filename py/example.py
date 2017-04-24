@@ -16,7 +16,9 @@ from mazebase.games import curriculum
 import logging
 logging.getLogger().setLevel(logging.DEBUG)
 
-player_mode = True
+np.set_printoptions(threshold=np.nan)
+
+player_mode = False
 switches = curriculum.CurriculumWrappedGame(
     games.Switches,
     waterpct=0.1, n_switches=4,
@@ -147,7 +149,7 @@ bd = curriculum.CurriculumWrappedGame(
         'switch_states': games.curriculum.NumericCurriculum(2, 2, 5),
     }
 )
-all_games = [bd, lk]
+all_games = [sg]
 game = games.MazeGame(
     all_games,
     # featurizer=featurizers.SentenceFeaturesRelative(
