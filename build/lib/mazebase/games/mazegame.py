@@ -454,9 +454,9 @@ class BaseMazeGame(object):
 class WithWaterAndBlocksMixin(BaseMazeGame):
     ''' Subcassing this game will generate random blocks and water '''
     __properties = dict(
-        waterpct=0,
-        blockpct=0,
-        water_penalty=0,
+        waterpct=0.1,
+        blockpct=0.1,
+        water_penalty=0.2,
     )
 
     def __init__(self, **kwargs):
